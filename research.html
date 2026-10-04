@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Climate Co-Pilot research directions and work to date." />
+  <title>Research | Climate Co-Pilot</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">CC</span><span>Climate Co-Pilot</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="team.html">Team</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section-dark">
+      <div class="container narrow-wide">
+        <p class="eyebrow">Climate Co-Pilot</p>
+        <h1>Research</h1>
+        <p>Climate Co-Pilot currently advances two core research directions in multimodal Earth system learning and intelligent agent systems, alongside longer-term applications in water and food security.</p>
+      </div>
+    </section>
+
+    <section class="section" id="multimodal">
+      <div class="container">
+        <p class="section-kicker">Research Direction 01</p>
+        <h2>Multimodal Foundation Models</h2>
+
+        <p class="section-intro">This research investigates how heterogeneous Earth system information can be represented jointly with natural language, enabling reusable representations for retrieval, interpretation, quantitative inference, and future multimodal interaction.</p>
+
+        <h3>EarthAlign &amp; MeteoLIP</h3>
+
+        <p><strong>EarthAlign</strong> is a large-scale Earth system-language dataset containing 553,738 samples spanning 2000–2024. It combines records from 10 expert-curated natural event and disaster sources with climatology-derived normal weather samples. Each sample is paired with 63-variable ERA5 meteorological data and four metadata-grounded natural-language caption styles.</p>
+
+        <p><strong>MeteoLIP</strong> is a multimodal representation learning framework that aligns ERA5 meteorological snapshots with natural language. It is evaluated on cross-modal retrieval, weather-condition classification, and physical variable estimation, demonstrating substantial improvements over corresponding CLIP and SigLIP baselines.</p>
+
+        <div class="slider-wrapper earthalign-slider">
+          <button class="slider-button" id="earthalignPrevBtn" aria-label="Previous figure">&#10094;</button>
+
+          <div class="slider-window">
+            <div id="earthalignImageSlider" class="image-slider">
+              <div class="slide"><img src="assets/images/earthalign/overview_1.svg" alt="EarthAlign overview figure 1"></div>
+              <div class="slide"><img src="assets/images/earthalign/overview_2.png" alt="EarthAlign overview figure 2"></div>
+              <div class="slide"><img src="assets/images/earthalign/data_construction.svg" alt="EarthAlign data construction"></div>
+              <div class="slide"><img src="assets/images/earthalign/meteolip_architecture.svg" alt="MeteoLIP architecture"></div>
+              <div class="slide"><img src="assets/images/earthalign/quantitative_results.png" alt="EarthAlign and MeteoLIP quantitative results"></div>
+              <div class="slide"><img src="assets/images/earthalign/qualitative_results.png" alt="EarthAlign and MeteoLIP qualitative results"></div>
+            </div>
+          </div>
+
+          <button class="slider-button" id="earthalignNextBtn" aria-label="Next figure">&#10095;</button>
+        </div>
+
+        <div class="slider-dots" id="earthalignSliderDots" aria-label="Figure navigation">
+          <span class="slider-dot is-active"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+        </div>
+
+        <p class="research-links"><strong>Resources:</strong> <a href="https://huggingface.co/datasets/MBZUAI/EarthAlign">Dataset & Weights</a></p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="agentic">
+      <div class="container">
+        <p class="section-kicker">Research Direction 02</p>
+        <h2>Intelligent Agent Systems</h2>
+
+        <p class="section-intro">This research investigates how language-model agents can coordinate scientific data, tools, models, and simulations to solve complex Earth system analysis tasks.</p>
+
+        <h3>TerraAgent &amp; TerraBench</h3>
+
+        <p><strong>TerraAgent</strong> provides an executable framework for tool-augmented Earth system reasoning, while <strong>TerraBench</strong> evaluates agents across heterogeneous scientific workflows involving Earth observation imagery, gridded environmental data, GIS reasoning, simulation, and document-grounded verification.</p>
+
+        <p>TerraBench comprises <strong>403 executable tasks</strong> across <strong>3 tracks</strong> and <strong>8 application domains</strong>, supported by <strong>77 scientific tools</strong> and approximately <strong>24,500 verified execution steps</strong>. Evaluation reveals a substantial gap between successful scientific tool use and final numerical correctness, highlighting the importance of outcome-based evaluation and numerical grounding.</p>
+
+        <div class="slider-wrapper terrabench-slider">
+          <button class="slider-button" id="terrabenchPrevBtn" aria-label="Previous figure">&#10094;</button>
+
+          <div class="slider-window">
+            <div id="terrabenchImageSlider" class="image-slider">
+              <div class="slide"><img src="assets/images/terrabench/climatecopilotbench_intro.png" alt="TerraBench overview"></div>
+              <div class="slide"><img src="assets/images/terrabench/framework_figure.svg" alt="TerraAgent and TerraBench framework"></div>
+              <div class="slide"><img src="assets/images/terrabench/Representative_traces.svg" alt="Representative TerraBench execution traces"></div>
+              <div class="slide"><img src="assets/images/terrabench/Data_Curate_pipeline.svg" alt="TerraBench data curation pipeline"></div>
+            </div>
+          </div>
+
+          <button class="slider-button" id="terrabenchNextBtn" aria-label="Next figure">&#10095;</button>
+        </div>
+
+        <div class="slider-dots" id="terrabenchSliderDots" aria-label="Figure navigation">
+          <span class="slider-dot is-active"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+        </div>
+
+        <p class="research-links"><strong>Resources:</strong> <a href="https://arxiv.org/abs/2606.13148">arXiv</a> · <a href="https://github.com/Takerdat23/TerraBench">Code</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="applications">
+      <div class="container">
+        <p class="section-kicker">Research Direction 03</p>
+        <h2>Applications: Water &amp; Food Security</h2>
+        <p class="section-intro">Later project phases will translate the underlying multimodal and agentic capabilities into application-specific systems for climate resilience in MENA.</p>
+        <div class="application-grid">
+          <article class="application-card" id="water-security">
+            <div class="application-icon">W</div>
+            <h3>Water Security</h3>
+            <p>Research will investigate surface-water and groundwater forecasting, water-stress assessment, and scenario-based planning using multimodal Earth system data and scientific models.</p>
+            <span class="status-badge">Planned research</span>
+          </article>
+          <article class="application-card" id="food-security">
+            <div class="application-icon">F</div>
+            <h3>Food Security</h3>
+            <p>Research will investigate crop heat and water stress, temporal vegetation dynamics, and adaptation strategies for climate-sensitive agriculture.</p>
+            <span class="status-badge">Planned research</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Climate Co-Pilot</strong><p>A Multimodal AI Agent for Climate Resilience in the MENA Region</p></div>
+      <div class="footer-links"><a href="index.html">Home</a><a href="research.html">Research</a><a href="team.html">Team</a><a href="resources.html">Resources</a></div>
+      <div><p>Supported and Funded by ADIA Lab</p><p>© <span data-current-year></span> Climate Co-Pilot</p></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
