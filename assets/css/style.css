@@ -236,3 +236,5 @@ p { margin: 0 0 18px; }
 .slider-dot { width: 9px; height: 9px; border-radius: 50%; background: #c5ccd6; cursor: pointer; }
 .slider-dot.is-active { background: #2563eb; }
 .terrabench-slider { max-width: 1200px; margin: 2.5rem auto 0; }
+
+.timeline-category { display: inline-block; margin-bottom: 0.4rem; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #2563eb; }
